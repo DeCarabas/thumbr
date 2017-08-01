@@ -4,7 +4,7 @@ const crypto = require('crypto');
 const http = require('http');
 const https = require('https');
 const sharp = require('sharp');
-const { URL } = require('url');
+const urlmod = require('url');
 
 AWS.config.update({
   region: 'us-west-2',
@@ -23,8 +23,7 @@ function isBlacklistUrl(url) {
 const THUMBNAIL_SIZE = 312;
 
 function getPath(urlObject) {
-  let path = urlObject.pathname;
-  if (urlObject.search) { path += urlObject.search; }
+  let path = urlObject.path;
   if (urlObject.hash) { path += urlObject.hash; }
   return path;
 }
@@ -47,7 +46,7 @@ function getUrl(url, referrer) {
       httpLib = https;
     }    
 
-    const theUrl = new URL(url);
+    const theUrl = urlmod.parse(url);
     const imageRequestParams = {
       method: 'GET',
       host: theUrl.hostname,
