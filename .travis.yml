@@ -1,6 +1,15 @@
 language: node_js
 node_js:
   - "node"
-addons:
-  artifacts: true
-  s3_region: "us-west-2" # defaults to "us-east-1"
+deploy:
+  provider: lambda
+  function_name: thumbr
+  region: us-west-2
+  role: arn:aws:iam::964037288281:role/lambda_basic_execution
+  runtime: nodejs6.10
+  handler_name: index.handler
+  access_key_id: AKIAIXGNYIPA4EJXU2OA
+  secret_access_key:
+    secure: "iyHJ9a+71KZ6QtYVkV3/DjFm4acf6Ln3N5xTBOzs0OqmugusWq2hqJlBKM7GgWszeLRT+wLn2G4U+D1BTCYyf/jUo8jIom9SXT+lpuIOoQrX+eR29N9WR0uEDZj9GMHtGG9Ds/gpgK4Db4I2Sdn2dE8JcpWI81pFNwcGDfESzQEXBHvdiPTlgnCrtfk7jdOgEHWHpmhGKnHLF9VVot0aeMNHbIpgG8KkGSkYuFhRRniUeVLWxqrMwFGgiQ6PTyGY4BWw05eXzVf4HQ6OgRd8uv22QgmmfMx+8Uw0OOLiMMo0GlCFz/OjAy3VLkG1GNCIuI5klNe8W9O6dYo+j6OHa7Rcix6Qg0l0BWZGMiucNXZpSc2MXaMAAJ5toJs/FX1Z1t1bcAcDuj20lM582N+/THSQ0gUoOlSv5NHZ8bO0lSNaoQkEcTvbKh8jlZPBEdLcUby4veqnR9IB9nXckap1CE1U91AODIZT4+bx93c1MbyTB58y31KbjBocRW/aqtvZskbIpn8C2OQP71ISdBoz+rW/afcYl1GpXkp+T2uH+FOtSJ/8uHe1wnztrTPyE5ebhctrmfcLhsmLuI9hrrbqBx+tY+mQbCzraTeN7uANr6NvpzwfKACBAEnjdngiaFHQkwnXa3gozw2In7qNXvRI914ycLC8aEltf20YRxsuons="
+
+  
