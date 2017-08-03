@@ -183,6 +183,8 @@ function dream(url, skipChecks, referrer) {
           thumbnailUrl: result.url,
           originalWidth: result.metadata.width,
           originalHeight: result.metadata.height,
+          thumbnailWidth: THUMBNAIL_SIZE,
+          thumbnailHeight: THUMBNAIL_SIZE,
         }),
         reason => {
           console.log('Nightmare: ', reason);
