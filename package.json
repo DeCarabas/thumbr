@@ -17,12 +17,12 @@
     "sharp": "^0.18.2"
   },
   "engines": {
-    "node": "8.x"
+    "node": "6.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/welcome-project"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "keywords": [
     "node",
     "glitch",

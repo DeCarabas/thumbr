@@ -16,6 +16,9 @@ exports.handler = (event, context, callback) => {
   }
 
   dream(url, skipChecks, referrer).then(result => {
-    callback(null, result); 
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify(result)
+    });
   });
 };
