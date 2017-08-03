@@ -4,8 +4,8 @@ const { dream } = require('./thumbs');
 exports.handler = (event, context, callback) => {
   var url, skipChecks, referrer;
 
-   url = event.queryStringParameters.dream || event.queryStringParameters.url;
-  if (url) {
+  if (event.queryStringParameters) {
+    url = event.queryStringParameters.dream || event.queryStringParameters.url; 
     skipChecks = event.queryStringParameters.skipChecks;
     referrer = event.queryStringParameters.referrer;    
   } else {
