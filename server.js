@@ -26,7 +26,7 @@ app.post("/dreams", function (request, response) {
       response.send(result);
     },
     reason => {
-      console.log(reason);
+      console.log('zomg no!',reason);
       response.sendStatus(500);
     }
   );
