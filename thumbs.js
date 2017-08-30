@@ -56,10 +56,10 @@ function getUrl(url, referrer) {
         'User-Agent': 'TheOnceAndFuture/1.0'
       }
     };
-    if (referrer) {
-      console.log('Referer: ', referrer);
-      imageRequestParams.headers['Referer'] = referrer;
-    }
+    // if (referrer) {
+    //   console.log('Referer: ', referrer);
+    //   imageRequestParams.headers['Referer'] = referrer;
+    // }
 
     const imageRequest = httpLib.request(imageRequestParams, response => {
       if (response.statusCode >= 300 && response.statusCode < 400 && hasHeader('location', response.headers)) {
