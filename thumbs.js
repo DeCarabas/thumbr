@@ -57,6 +57,7 @@ function getUrl(url, referrer) {
       }
     };
     if (referrer) {
+      console.log('Referer: ', referrer);
       imageRequestParams.headers['Referer'] = referrer;
     }
 
@@ -187,7 +188,7 @@ function dream(url, skipChecks, referrer) {
           thumbnailHeight: THUMBNAIL_SIZE,
         }),
         reason => {
-          console.log('Nightmare: ', reason);
+          reason = reason.toString();
           resolve({
             originalUrl: url,
             error: reason,
