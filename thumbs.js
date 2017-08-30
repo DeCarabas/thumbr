@@ -57,6 +57,7 @@ function getUrl(url, referrer) {
       }
     };
     if (referrer) {
+      console.log('Referer: ', referrer);
       imageRequestParams.headers['Referer'] = referrer;
     }
 
