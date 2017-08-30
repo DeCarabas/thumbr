@@ -188,7 +188,8 @@ function dream(url, skipChecks, referrer) {
           thumbnailHeight: THUMBNAIL_SIZE,
         }),
         reason => {
-          reason = reason.toString();
+          console.log('Nightmare: ', reason);
+          reason = reason.toString();          
           resolve({
             originalUrl: url,
             error: reason,
