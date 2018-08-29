@@ -1,3 +1,4 @@
+// This is the endpoint for the HTML page from glitch, which lets us test the thumbnailer.
 // Using 'express' to serve this out in glitch, but obv. other endpoints don't need this.
 const express = require('express');
 const { dream } = require('./thumbs');
