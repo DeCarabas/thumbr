@@ -2,25 +2,25 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-
-  "name": "my-glitch-app",
-  "version": "0.0.1",
-  "description": "What am I about?",
+  "name": "thumbr",
+  "version": "0.1.0",
+  "description": "A small AWS lambda service that generates thumbnails for an RSS reader.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo There are no tests dude."
   },
   "dependencies": {
-    "aws-sdk": "^2.88.0",
-    "express": "^4.15.3",
-    "request": "^2.81.0",
-    "sharp": "^0.18.2"
+    "aws-sdk": "^2.304.0",
+    "express": "^4.16.3",
+    "request": "^2.88.0",
+    "sharp": "^0.20.7"
   },
   "engines": {
-    "node": "6.x"
+    "node": "8.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://github.com/DeCarabas/thumbr"
   },
   "license": "GPL-3.0",
   "keywords": [
