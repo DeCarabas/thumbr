@@ -78,7 +78,7 @@ function getUrl(url, referrer) {
 }
 
 function processUrl(url, skipChecks, referrer) {
-  console.log('Loading ', url, skipChecks, referrer);
+  console.log('Loading ', url, ' skip checks: ', skipChecks, ' referrer: ', referrer);
   return new Promise((resolve, reject) => {
     if (!skipChecks && isBlacklistUrl(url)) {
       reject('blacklist');

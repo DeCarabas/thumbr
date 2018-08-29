@@ -1,4 +1,4 @@
-// This is the AWS lambda import.
+// This is the entry point for AWS lambda.
 const { dream } = require('./thumbs');
 
 exports.handler = (event, context, callback) => {
